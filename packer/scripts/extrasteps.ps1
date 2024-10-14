@@ -1,5 +1,5 @@
 # Set a specific DNS server for 'Ethernet 0 2' adapter
-Set-DnsClientServerAddress -InterfaceAlias 'Ethernet 0 2' -ServerAddresses ('192.168.10.1')
+Set-DnsClientServerAddress -InterfaceAlias 'Ethernet Instance 0' -ServerAddresses ('192.168.10.1')
 
 # Set Security Protocol to TLS 1.2
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
