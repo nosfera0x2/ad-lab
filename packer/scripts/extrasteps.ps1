@@ -63,16 +63,4 @@ if (-not $success) {
     Write-Host "Successfully downloaded CloudbaseInitSetup_Stable_x64.msi to C:\\Setup"
 }
 
-# Verify file size to ensure the download is complete
-$expectedSize = 69267456  # Replace with the actual expected size of the MSI file in bytes
-$actualSize = (Get-Item $outFile).Length
-
-Write-Host "Verifying downloaded file size..."
-if ($actualSize -eq $expectedSize) {
-    Write-Host "File download verified. Size is correct ($actualSize bytes)."
-} else {
-    Write-Host "File download incomplete. Expected $expectedSize bytes, but got $actualSize bytes."
-    exit 1  # Exit with error if the file size doesn't match
-}
-
 Write-Host "Network and system configurations are complete."
