@@ -1,0 +1,8 @@
+proxmox_url             = "https://192.168.254.213:8006/api2/json"
+proxmox_username        = "root@pam"
+proxmox_password        = "CHANGEME"
+proxmox_skip_tls_verify = "true"
+proxmox_node            = "prox01"
+proxmox_pool            = "Templates"
+proxmox_iso_storage     = "local"
+proxmox_vm_storage      = "local-lvm"
