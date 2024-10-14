@@ -12,7 +12,7 @@ variable "vm_config" {
 
   default = {
     "dc01" = {
-      name               = "GOAD-DC01"
+      name               = "MummysTomb"
       desc               = "DC01 - windows server 2019 - 192.168.10.10"
       cores              = 2
       memory             = 3096
@@ -22,7 +22,7 @@ variable "vm_config" {
       gateway            = "192.168.10.1"
     }
     "dc02" = {
-      name               = "GOAD-DC02"
+      name               = "DraculasCastle"
       desc               = "DC02 - windows server 2019 - 192.168.10.11"
       cores              = 2
       memory             = 3096
@@ -32,7 +32,7 @@ variable "vm_config" {
       gateway            = "192.168.10.1"
     }
     "srv02" = {
-      name               = "GOAD-SRV02"
+      name               = "Frankenstein"
       desc               = "SRV02 - windows server 2019 - 192.168.10.22"
       cores              = 2
       memory             = 4096
