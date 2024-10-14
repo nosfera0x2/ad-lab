@@ -1,9 +1,12 @@
-# Install NuGet provider and PowerShellGet module
-Install-PackageProvider -Name Nuget -Force
-Install-Module -Name PowerShellGet -Force
+# Set a specific DNS server for 'Ethernet 0 2' adapter
+Set-DnsClientServerAddress -InterfaceAlias 'Ethernet 0 2' -ServerAddresses ('192.168.10.1')
 
 # Set Security Protocol to TLS 1.2
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+# Install NuGet provider and PowerShellGet module
+Install-PackageProvider -Name Nuget -Force
+Install-Module -Name PowerShellGet -Force
 
 # Create C:\Setup directory if it does not exist
 if (!(Test-Path -Path 'C:\\Setup')) {
@@ -48,9 +51,6 @@ if ($actualSize -eq $expectedSize) {
     Write-Host "File download incomplete. Expected $expectedSize bytes, but got $actualSize bytes."
     exit 1  # Exit with error if the file size doesn't match
 }
-
-# Set a specific DNS server for 'Ethernet 0 2' adapter
-Set-DnsClientServerAddress -InterfaceAlias 'Ethernet 0 2' -ServerAddresses ('192.168.10.1')
 
 Write-Host "Network and system configurations are complete."
 
