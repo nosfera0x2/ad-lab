@@ -76,14 +76,14 @@ build {
     elevated_password = "vagrant"
     elevated_user     = "vagrant"
     pause_before      = "2m0s"
-    scripts           = ["/root/gameofAD/packer/proxmox/scripts/sysprep/cloudbase-init.ps1"]
+    scripts           = ["/root/ad-lab/packer/scripts/sysprep/cloudbase-init.ps1"]
   }
 
   provisioner "powershell" {
     elevated_password = "vagrant"
     elevated_user     = "vagrant"
     pause_before      = "1m0s"
-    scripts           = ["/root/gameofAD/packer/proxmox/scripts/sysprep/cloudbase-init-p2.ps1"]
+    scripts           = ["/root/ad-lab/packer/scripts/sysprep/cloudbase-init-p2.ps1"]
   }
       
 }
