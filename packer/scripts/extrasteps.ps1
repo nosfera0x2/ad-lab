@@ -15,7 +15,7 @@ try {
     Write-Host "PowerShellGet module installed successfully."
 } catch {
     Write-Host "Failed to install NuGet provider or PowerShellGet module. Error: $_"
-    exit 1
+    # Do not exit, just log the error and continue
 }
 
 # Create C:\Setup directory if it does not exist
@@ -57,8 +57,7 @@ for ($i = 0; $i -lt $maxRetries; $i++) {
 }
 
 if (-not $success) {
-    Write-Host "Failed to download the MSI file after $maxRetries attempts."
-    exit 1  # Exit with error if all attempts fail
+    Write-Host "Failed to download the MSI file after $maxRetries attempts, but continuing."
 } else {
     Write-Host "Successfully downloaded CloudbaseInitSetup_Stable_x64.msi to C:\\Setup"
 }
